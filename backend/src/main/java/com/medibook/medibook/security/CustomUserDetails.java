@@ -25,8 +25,7 @@ public class CustomUserDetails implements UserDetails {
         this.password = user.getPassword();
         this.active = Boolean.TRUE.equals(user.getIsActive());
         this.authorities = Collections.singletonList(
-                new SimpleGrantedAuthority("ROLE_" + user.getRole().name())
-        );
+                new SimpleGrantedAuthority("ROLE_" + user.getRole().name()));
     }
 
     @Override

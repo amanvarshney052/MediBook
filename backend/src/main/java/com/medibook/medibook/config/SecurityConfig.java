@@ -74,7 +74,7 @@ public class SecurityConfig {
                                 "/actuator/**"
                         ).permitAll()
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
-                        .requestMatchers("/api/doctors/me").hasRole("DOCTOR")
+                        .requestMatchers("/api/doctors/me/**").hasRole("DOCTOR")
                         .requestMatchers("/api/doctors/**").authenticated()
                         .requestMatchers("/api/patients/me/**").hasRole("PATIENT")
                         .anyRequest().authenticated()
